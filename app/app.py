@@ -1,7 +1,8 @@
 from typing import List, Dict
 import mysql.connector
 import simplejson as json
-from flask import Flask, Response
+from flask import Flask,Response
+
 
 app = Flask(__name__)
 
@@ -9,7 +10,7 @@ app = Flask(__name__)
 def cities_import() -> List[Dict]:
     config = {
         'user': 'root',
-        'password': 'root',
+        'password': 'Nj1T531153@!',
         'host': 'db',
         'port': '3306',
         'database': 'citiesData'
