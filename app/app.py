@@ -5,7 +5,6 @@ from flask import Flask
 from flask import Response
 
 
-
 app = Flask(__name__)
 
 
@@ -13,7 +12,7 @@ def cities_import() -> List[Dict]:
     config = {
         'user': 'root',
         'password': 'Nj1T531153@!',
-        'host': 'db',
+        'host': 'localhost',
         'port': '3306',
         'database': 'new_schema1'
     }
@@ -37,4 +36,4 @@ def index() -> str:
 
 
 if __name__ == '__main__':
-    app.run(host='0.0.0.0')
+    app.run()
