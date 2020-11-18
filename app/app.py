@@ -3,6 +3,7 @@ import mysql.connector
 import simplejson as json
 from flask import Flask
 from flask import Response
+from flask import render_template
 
 
 app = Flask(__name__)
@@ -32,7 +33,7 @@ def index():
     user = {'username':'Pria'}
     cities_data = cities_import()
 
-    return Flask.render_template('index.html',title='None',user=user,cities=cities_data)
+    return render_template('index.html',title='Home',user=user,cities=cities_data)
 
 
 @app.route('/api/cities')
