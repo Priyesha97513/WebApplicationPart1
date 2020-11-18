@@ -1,7 +1,8 @@
 from typing import List, Dict
 import mysql.connector
 import simplejson as json
-from flask import Flask,Response
+from flask import Flask
+from flask import Response
 
 
 app = Flask(__name__)
@@ -18,7 +19,7 @@ def cities_import() -> List[Dict]:
     connection = mysql.connector.connect(**config)
     cursor = connection.cursor(dictionary=True)
 
-    cursor.execute('SELECT * FROM tblCitiesImport')
+    cursor.execute('SELECT * FROM tblcitiesimport1')
     result = cursor.fetchall()
 
     cursor.close()
