@@ -5,6 +5,7 @@ from flask import Flask
 from flask import Response
 
 
+
 app = Flask(__name__)
 
 
@@ -14,7 +15,7 @@ def cities_import() -> List[Dict]:
         'password': 'Nj1T531153@!',
         'host': 'db',
         'port': '3306',
-        'database': 'citiesData'
+        'database': 'new_schema1'
     }
     connection = mysql.connector.connect(**config)
     cursor = connection.cursor(dictionary=True)
