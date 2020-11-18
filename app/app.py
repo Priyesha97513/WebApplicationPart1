@@ -1,7 +1,8 @@
 from typing import List, Dict
 import mysql.connector
 import simplejson as json
-from flask import Flask,Response
+from flask import Flask
+from flask import Response
 
 
 app = Flask(__name__)
